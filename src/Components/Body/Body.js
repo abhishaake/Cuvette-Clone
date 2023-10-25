@@ -2,7 +2,7 @@
 function Body(){
 
     return (<>
-        <div></div>
+        <div style={{width:'100%',minHeight:'500px',backgroundColor:'gray'}}></div>
     </>);
 }
 

@@ -1,0 +1,51 @@
+
+.analysis-container{
+    margin-right:25px;
+    margin-left: auto;
+    position: relative;
+    font-size: 13px;
+}
+
+.analysis-div{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #ebf0f5;
+    padding: 25px;
+    width: 400px;
+    min-height: 300px;
+    margin-top:20px
+}
+
+.analysis-div >div{
+    width: 100%;
+    letter-spacing: 0.6px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    cursor: pointer;
+    grid-gap: 16px;
+}
+
+.analysis-elements{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 7px;
+    margin: 6px 0;
+}
+
+.analysis-elements >div{
+    border-radius: 10px;
+    width: 220px;
+    min-height: 11px;
+    background-color: blue;
+}
+.analysis-elements >div>div{
+    border-radius: 10px;
+    min-height: 11px;
+    background-color: gray;
+}
+
