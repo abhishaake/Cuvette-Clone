@@ -16,7 +16,16 @@
     padding: 25px;
     width: 400px;
     min-height: 300px;
-    margin-top:20px
+    margin-top:20px;
+
+    .heading{
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 14px;
+    }
 }
 
 .analysis-div >div{
@@ -38,14 +47,30 @@
 }
 
 .analysis-elements >div{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    width: 95%;
+    height: 11px;
+    font-weight: bold;
+}
+.analysis-elements >div>div, .analysis-elements >div>div>div{
     border-radius: 10px;
     width: 220px;
-    min-height: 11px;
-    background-color: blue;
-}
-.analysis-elements >div>div{
-    border-radius: 10px;
-    min-height: 11px;
-    background-color: gray;
+    height: 11px;
 }
 
+.pieChart{
+    top: -60px; 
+    position: relative; 
+    z-index: -99;
+    margin: auto;
+}
+
+.centerImage{
+    position: relative;
+    width: 30px;
+    z-index: 99;
+    top: 142px;
+    left: 114px;
+}
