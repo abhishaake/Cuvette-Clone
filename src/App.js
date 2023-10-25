@@ -9,9 +9,14 @@ function App() {
   return (
     <>
       <Navbar/>
-      <Dashboard/>
-      <Body/>
-      <Analysis/>
+      
+      <div className="page">
+        <Dashboard/>
+        <Body/>
+        <Analysis/>
+
+      </div>
+      
     
     </>
   );
