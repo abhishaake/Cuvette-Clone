@@ -54,7 +54,7 @@
     border-radius: 8px;
     position: relative;
     min-width: 140px;
-    transition: all 0.1s;
+    transition: all 0.2s;
     align-items: center;
     gap: 15px;
 
@@ -62,5 +62,35 @@
         width: 18px;
         height: 18px;
     }
+
+    .dropdown-list{
+        background-color: white;
+        right: 0;
+        z-index: 999;
+        width:100%;
+        text-align: center;
+        border-width: 1.5px;
+        border-color: #ebf0f5;
+        border-style: solid;
+        border-radius: 8px;
+        padding: 20px;
+        position: absolute;
+        top: 90%;
+        margin-top: 22px;
+    }
+
+    .dropdown-list >div>a{
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        grid-gap: 10px;
+        transition: all 0.2s;
+    }
+    .dropdown-list >div>a:hover{
+        color: #445ee2;
+    }
 }
 
+.navbar-dropdown:hover,.navbar-noti:hover{
+    background-color: #f7f8fa;
+}
