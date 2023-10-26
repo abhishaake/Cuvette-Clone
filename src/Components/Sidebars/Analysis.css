@@ -74,3 +74,38 @@
     top: 142px;
     left: 114px;
 }
+
+  @keyframes fadein {
+    from {
+        
+        background-position: bottom right;
+    }
+    to {
+        background-position: bottom left;
+    }
+}
+
+.barBlue{
+    width: 80% !important;
+    animation: fadein 4s;
+    background: linear-gradient(to right, dodgerblue 50%, aliceblue 50%);
+    background-size: 200% 100%;
+}
+.barRed{
+    width: 24% !important;
+    animation: fadein 4s;
+    background: linear-gradient(to right, red 50%, rgb(255 228 232) 50%);
+    background-size: 200% 100%;
+}
+.barGreen{
+    width: 96% !important;
+    animation: fadein 4s;
+    background: linear-gradient(to right, limegreen 50%, #d5fed7 50%);
+    background-size: 200% 100%;
+}
+.barOrange{
+    width: 60% !important;
+    animation: fadein 4s;
+    background: linear-gradient(to right, orange 50%, antiquewhite 50%);
+    background-size: 200% 100%;
+}

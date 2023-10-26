@@ -13,9 +13,11 @@ function Analysis(){
 
         const data = [
                 ["Q", "M"],
-                ["Correct", studentData.score],
-                ["Incorrect", 15-studentData.score] 
+                ["Correct", parseInt(studentData.score)],
+                ["Incorrect", (15-parseInt(studentData.score))] 
               ];
+
+              console.log("check=== " + data);
 
         const options = {
                 pieHole: 0.62,
@@ -36,7 +38,7 @@ function Analysis(){
                     <div className="analysis-elements">HTML Tools, Forms, History
                         <div style={{color:'dodgerblue'}}>
                                 <div style={{backgroundColor:'aliceblue'}}>
-                                        <div style={{width:'80%',backgroundColor:'dodgerblue'}}></div>
+                                        <div className="barBlue"></div>
                                 </div>
                                 80%
                         </div>
@@ -45,7 +47,7 @@ function Analysis(){
                     <div className="analysis-elements">Tags & References in HTML
                         <div style={{color:'orange'}}>
                                 <div style={{backgroundColor:'antiquewhite'}}>
-                                        <div style={{width:'60%',backgroundColor:'orange'}}></div>
+                                        <div className="barOrange"></div>
                                 </div>
                                 60%
                         </div>
@@ -54,7 +56,7 @@ function Analysis(){
                     <div className="analysis-elements">Tables & CSS Basics
                         <div style={{color:'red'}}>
                                 <div style={{backgroundColor:'rgb(255 228 232)'}}>
-                                        <div style={{width:'24%',backgroundColor:'red'}}></div>
+                                        <div className="barRed"></div>
                                 </div>
                                 24%
                         </div>
@@ -63,7 +65,7 @@ function Analysis(){
                     <div className="analysis-elements">Tables & CSS Basics
                         <div style={{color:'limegreen'}}>
                                 <div style={{backgroundColor:'#d5fed7'}}>
-                                        <div style={{width:'96%',backgroundColor:'limegreen'}}></div>
+                                        <div className="barGreen"></div>
                                 </div>
                                 96%
                         </div>

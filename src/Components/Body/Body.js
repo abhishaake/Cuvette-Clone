@@ -32,9 +32,9 @@ function Body(){
     console.log("checkkkkk " + modalOpen);
 
     const text = ()=>{
-        if(studentData.percentile<72) return 'You scored ' + studentData.percentile + '% Percentile which is lower than';
-        else if(studentData.percentile===72) return 'You scored ' + studentData.percentile + '% Percentile which is equal to';
-        else return 'You scored ' + studentData.percentile + '% Percentile which is higher than';
+        if(studentData.percentile<72) return (<><strong>You scored {studentData.percentile}% percentile</strong> which is lower than</>);
+        else if(studentData.percentile===72) return (<><strong>You scored {studentData.percentile}% percentile</strong> which is equal to</>);
+        else return (<><strong>You scored {studentData.percentile}% percentile</strong> which is higher than</>);
     }
     const CustomizedDot = (props) => {
         const { cx, cy, stroke, payload, value } = props;
@@ -122,7 +122,7 @@ function Body(){
                 <div className='body-header'>
                     <div style={{width:'70%'}}>
                         <div><strong>Comparison Graph</strong></div>
-                        <div style={{margin:'15px 0 0'}}> {text()} the average Percentile 72% of all engineers who took the assessment</div>
+                        <div style={{margin:'15px 0 0',color:'#5c5c5c'}}> {text()} the average Percentile 72% of all engineers who took the assessment</div>
                     </div>
                     <div style={{margin:'auto 5% auto auto'}}>
                     <div className='body-icons'><svg style={{margin:'auto',backgroundColor:'rgb(210 219 224)'}} xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-graph-up" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07Z"/> </svg></div>
@@ -133,7 +133,7 @@ function Body(){
                     <div className="body-graph">
                         <ResponsiveContainer width="100%" >
                             <LineChart
-                            width={500}
+                            width={700}
                             height={300}
                             data={data}
                             margin={{

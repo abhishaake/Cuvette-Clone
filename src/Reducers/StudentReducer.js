@@ -9,9 +9,18 @@ export const studentSlice = createSlice({
   },
   reducers: {
     update: (state,action) => {
-        if(action.payload.rank)  state.rank = action.payload.rank;
-        if(action.payload.percentile) state.percentile = action.payload.percentile;
-        if(action.payload.score) state.score = action.payload.score;
+        if(action.payload.rank){  
+            let val = parseInt(action.payload.rank);
+            if(val!==NaN) state.rank = val;
+        }
+        if(action.payload.percentile) {
+            let val = parseInt(action.payload.percentile);
+            if(val!==NaN) state.percentile = val;
+        }
+        if(action.payload.score) {
+            let val = parseInt(action.payload.score);
+            if(val!==NaN) state.score = val;
+        }
     },
   },
 })

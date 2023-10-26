@@ -85,7 +85,7 @@ function UpdateScoresModal(){
                 <div className="modal-footer">
                     <div>
                         <button style={{backgroundColor:'white',color:'#3030a6'}} onClick={()=>dispatch(updateModal())}>Cancel</button>
-                        <button onClick={()=>dispatch(update(studentData))}>Save &#x1F822;</button>
+                        <button onClick={()=>{dispatch(update(studentData));dispatch(updateModal());}}>Save &#x1F822;</button>
                     </div>
                 </div>
             </div>
