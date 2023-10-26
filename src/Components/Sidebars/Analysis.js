@@ -1,12 +1,20 @@
 import "./Analysis.css";
 import targetIcon from "./Assets/target-icon.jpg";
 import { Chart } from "react-google-charts";
+import { useState } from 'react';
+import { useSelector } from 'react-redux'
+import {
+    getStudentData,
+  } from '../../Reducers/StudentReducer';
 
 function Analysis(){
+
+        const studentData = useSelector(getStudentData);
+
         const data = [
                 ["Q", "M"],
-                ["Correct", 7],
-                ["Incorrect", 8] 
+                ["Correct", studentData.score],
+                ["Incorrect", 15-studentData.score] 
               ];
 
         const options = {
@@ -66,10 +74,10 @@ function Analysis(){
             <div className="analysis-div" style={{height:'300px'}}>
                 <div className="heading">
                         Question Analysis
-                        <div style={{color:'dodgerblue'}}> 07 / 15 </div>
+                        <div style={{color:'dodgerblue'}}> {studentData.score>9?studentData.score:'0'+studentData.score} / 15 </div>
                 </div>
                 <div style={{fontSize:'13px'}}>
-                         <p><strong>You scored 7 question correct out of 15.</strong> However it still needs some improvements.</p> 
+                         <p><strong>You scored {studentData.score} question correct out of 15.</strong> However it still needs some improvements.</p> 
                     <div className="pieChart">
                     <img className="centerImage" src={targetIcon}></img>
                     <Chart
