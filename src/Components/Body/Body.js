@@ -16,6 +16,7 @@ import checkIcon from "./Assets/check-icon.png";
 import npIcon from "./Assets/np-icon.png";
 import "./Body.css";
 import graphData from "./graphData"
+import UpdateScoresModal from '../Modals/UpdateScoresModal';
 
 function Body(){
 
@@ -52,6 +53,7 @@ function Body(){
 
     return (<>
         <div className='body-container'>
+            <UpdateScoresModal/>
 
             <div className='body-div'>
                 <div className='body-div_div'>
