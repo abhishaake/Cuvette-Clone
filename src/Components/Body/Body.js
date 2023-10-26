@@ -66,8 +66,9 @@ function Body(){
     return (<>
         <div className='body-container'>
             {modalOpen && <UpdateScoresModal/> } 
-
+           <div style={{position:'relative',margin:'10px auto -15px 0',color:'gray',fontSize:'14px'}}>Skill Test</div> 
             <div className='body-div'>
+                
                 <div className='body-div_div'>
                     <div className='body-logo_div'>
                         <img style={{width:'40px'}} src={htmlIcon}></img>
