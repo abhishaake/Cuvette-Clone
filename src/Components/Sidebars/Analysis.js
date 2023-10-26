@@ -17,7 +17,6 @@ function Analysis(){
                 ["Incorrect", (15-parseInt(studentData.score))] 
               ];
 
-              console.log("check=== " + data);
 
         const options = {
                 pieHole: 0.62,

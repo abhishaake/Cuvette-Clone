@@ -29,7 +29,6 @@ function Body(){
     const data = graphData();
     const studentData = useSelector(getStudentData);
     const modalOpen = useSelector(getModalData);
-    console.log("checkkkkk " + modalOpen);
 
     const text = ()=>{
         if(studentData.percentile<72) return (<><strong>You scored {studentData.percentile}% percentile</strong> which is lower than</>);
